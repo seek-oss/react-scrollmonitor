@@ -1,0 +1,79 @@
+
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "brace-style": [2, "1tbs"],
+    "camelcase": [2, { "properties": "always" }],
+    "comma-dangle": [2, "never"],
+    "comma-style": [2, "last"],
+    "eol-last": 2,
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    "linebreak-style": [2, "unix"],
+    "no-cond-assign": [2, "always"],
+    "no-console": 2,
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "no-spaced-func": 2,
+    "no-trailing-spaces": 2,
+    "no-unused-vars": 2,
+    "newline-after-var": [2, "always"],
+    "object-curly-spacing": [2, "always"],
+    "quote-props": [2, "as-needed"],
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "space-after-keywords": [2, "always"],
+    "space-before-blocks": [2, "always"],
+    "space-before-function-paren": [2, "never"],
+    "space-in-parens": [2, "never"],
+    "react/jsx-uses-react": 2,
+    "react/prop-types": 2,
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-closing-bracket-location": [2, { selfClosing: "tag-aligned", nonEmpty: "after-props" }],
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-no-undef": 2,
+    "jsx-quotes": 2,
+    "react/jsx-sort-prop-types": 0,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-multi-comp": 2,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/require-extension": 2,
+    "react/self-closing-comp": 2,
+    "react/sort-comp": [ 2, {
+      "order": [
+        "lifecycle",
+        "everything-else",
+        "render"
+      ],
+      "groups": {
+        "lifecycle": [
+          "displayName",
+          "contextTypes",
+          "propTypes",
+          "defaultProps",
+          "constructor",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount"
+        ]
+      }
+    }],
+    "react/wrap-multilines": 2
+  },
+  "plugins": [
+    "react"
+  ]
+}
