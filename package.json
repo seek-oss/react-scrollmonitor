@@ -18,6 +18,9 @@
   "browser": {
     "./build/scrollMonitor.js": "./build/scrollMonitorClient.js"
   },
+  "peerDependency": {
+    "react": ">=0.13"
+  },
   "dependencies": {
     "scrollmonitor": "1.0.12"
   },

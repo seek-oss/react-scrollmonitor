@@ -2,6 +2,8 @@
 
 React component wrapper for [scrollMonitor](https://github.com/stutrek/scrollMonitor)
 
+Requires React 0.13.0 or greater
+
 ## Usage
 
 ```javascript
