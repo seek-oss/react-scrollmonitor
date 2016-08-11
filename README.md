@@ -16,6 +16,8 @@ import ScrollMonitor from 'react-scrollmonitor';
 </ScrollMonitor>
 ```
 
+Note: You can only wrap a single child element with react-scrollmonitor. Multiple components being wrapped will result in errors. 
+
 ## Events
 
 react-scrollmonitor supports the following events, for details on each event see the [scrollMonitor github page](https://github.com/stutrek/scrollMonitor).

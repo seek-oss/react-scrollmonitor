@@ -41,26 +41,32 @@ var ScrollMonitor = function (_Component) {
       var partiallyExitViewport = _props.partiallyExitViewport;
 
 
-      var monitor = _scrollMonitor2.default.create(this._component);
+      this.monitor = _scrollMonitor2.default.create(this._component);
 
       if (visibilityChange) {
-        monitor.visibilityChange(visibilityChange);
+        this.monitor.visibilityChange(visibilityChange);
       }
       if (stateChange) {
-        monitor.stateChange(stateChange);
+        this.monitor.stateChange(stateChange);
       }
       if (enterViewport) {
-        monitor.enterViewport(enterViewport);
+        this.monitor.enterViewport(enterViewport);
       }
       if (fullyEnterViewport) {
-        monitor.fullyEnterViewport(fullyEnterViewport);
+        this.monitor.fullyEnterViewport(fullyEnterViewport);
       }
       if (exitViewport) {
-        monitor.exitViewport(exitViewport);
+        this.monitor.exitViewport(exitViewport);
       }
       if (partiallyExitViewport) {
-        monitor.partiallyExitViewport(partiallyExitViewport);
+        this.monitor.partiallyExitViewport(partiallyExitViewport);
       }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      console.log('heyo');
+      this.monitor.destroy();
     }
   }, {
     key: 'render',
@@ -70,7 +76,7 @@ var ScrollMonitor = function (_Component) {
       var children = this.props.children;
 
 
-      return (0, _react.cloneElement)(children, {
+      return (0, _react.cloneElement)(_react.Children.only(children), {
         ref: function ref(c) {
           _this2._component = c;
         }
