@@ -65,7 +65,6 @@ var ScrollMonitor = function (_Component) {
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      console.log('heyo');
       this.monitor.destroy();
     }
   }, {
