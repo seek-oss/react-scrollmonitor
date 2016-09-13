@@ -4,7 +4,6 @@
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && babel lib --out-dir build --ignore *.test.js",
-    "coverage": "babel-istanbul cover _mocha 'lib/**/*.test.js' && babel-istanbul check-coverage --branches 100",
     "lint": "eslint lib",
     "preversion": "npm run lint",
     "version": "npm run build && git add -A build",
