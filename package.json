@@ -1,6 +1,6 @@
 {
   "name": "react-scrollmonitor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && babel lib --out-dir build --ignore *.test.js",
