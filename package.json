@@ -7,7 +7,7 @@
     "lint": "eslint lib",
     "preversion": "npm run lint",
     "version": "npm run build && git add -A build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "license": "MIT",
   "repository": {
