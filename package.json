@@ -9,6 +9,8 @@
     "version": "npm run build && git add -A build",
     "postversion": "git push && git push --tags && npm publish"
   },
+  "description": "React component wrapper for scrollMonitor",
+  "keywords": ["react", "scroll", "events"],
   "license": "MIT",
   "repository": {
     "type": "git",
