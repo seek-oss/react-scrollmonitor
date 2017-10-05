@@ -1,13 +1,15 @@
 {
   "name": "react-scrollmonitor",
-  "version": "0.0.5",
+  "version": "0.0.0-development",
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && babel lib --out-dir build --ignore *.test.js",
     "lint": "eslint lib",
-    "preversion": "npm run lint",
-    "version": "npm run build && git add -A build",
-    "postversion": "git push && git push --tags && npm publish"
+    "precommit": "npm run lint",
+    "commit": "git-cz",
+    "commitmsg": "commitlint -e -x '@commitlint/config-angular'",
+    "prepublishOnly": "npm run build",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "description": "React component wrapper for scrollMonitor",
   "keywords": [
@@ -18,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SEEK-Jobs/react-scrollmonitor.git"
+    "url": "https://github.com/seek-oss/react-scrollmonitor.git"
   },
   "browser": {
     "./build/scrollMonitor.js": "./build/scrollMonitorClient.js"
@@ -30,16 +32,27 @@
     "scrollmonitor": "1.0.12"
   },
   "devDependencies": {
+    "@commitlint/cli": "^4.0.0",
+    "@commitlint/config-angular": "^3.1.1",
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.0",
     "babel-eslint": "^4.1.8",
     "babel-istanbul": "^0.6.0",
     "babel-plugin-transform-class-properties": "^6.6.0",
     "babel-preset-es2015": "^6.3.13",
-    "babel-preset-stage-2": "^6.3.13",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.3.13",
     "babel-register": "^6.4.3",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
     "eslint": "^1.10.3",
-    "eslint-plugin-react": "^5.0.0"
+    "eslint-plugin-react": "^5.0.0",
+    "husky": "^0.14.3",
+    "semantic-release": "^8.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
