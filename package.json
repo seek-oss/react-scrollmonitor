@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "scrollmonitor": "1.0.12"
+    "scrollmonitor": "^1.2.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^4.0.0",
